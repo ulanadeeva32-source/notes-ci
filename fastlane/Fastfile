@@ -4,11 +4,11 @@ platform :android do
   desc "Deploy to Firebase App Distribution"
   lane :distribute do
     firebase_app_distribution(
-      app: "1:ВАШ_ID_FIREBASE",   # Firebase -> Project settings -> Your apps -> App ID
-      service_credentials_file_content: ENV["FIREBASE_SERVICE_ACCOUNT"], # секрет из GitHub
-      groups: "qa-team",           # alias группы тестеров в Firebase
+      app: "1:994247523902:android:aedf386837ac53cfd35b6f",
+      service_credentials_json_data: ENV["FIREBASE_SERVICE_ACCOUNT"],
+      groups: "qa-team",
       android_artifact_type: "APK",
-      apk_path: "app/build/outputs/apk/release/app-release.apk",
+      android_artifact_path: "app/build/outputs/apk/release/app-release.apk",
       release_notes: "CI build ##{ENV['GITHUB_RUN_NUMBER']} (#{ENV['GITHUB_REF_NAME']})"
     )
   end
