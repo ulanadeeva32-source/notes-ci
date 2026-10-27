@@ -14,8 +14,8 @@ android {
         applicationId = "com.example.notes"
         minSdk = 26
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 3
+        versionName = "1.1"
     }
 
     // Подпись релиза: keystore.jks кладётся в app/ только на сервере CI (из секретов GitHub),
